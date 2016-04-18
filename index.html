@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Play D3.js</title>
+    <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="bower_components/d3/d3.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <!-- <h4 id="hovered">chevrolet chevelle malibu</h4> -->
+    <div id="label"><b>Choose x-Axis:</b>
+    <select name="xAX" id="xAXs">
+        <option value="mpg">mpg</option>
+        <option value="cylinders">cylinders</option>
+        <option value="displacement">displacement</option>
+        <option value="horsepower">horsepower</option>
+        <option value="weight">weight</option>
+        <option value="acceleration">acceleration</option>
+        <option value="model.year">model year</option>
+
+    </select>
+    </div>
+
+	<br>
+    
+    <div id="label2"><b>Choose y-Axis:</b>
+    <select name="yAX" id="yAXs">
+        <option value="mpg">mpg</option>
+        <option value="cylinders">cylinders</option>
+        <option value="displacement">displacement</option>
+        <option value="horsepower">horsepower</option>
+        <option value="weight">weight</option>
+        <option value="acceleration">acceleration</option>
+        <option value="model.year">model year</option>
+    </select>
+    </div>
+    
+    <br>
+	
+	<div>
+	<b>Select data range based on MPG: </b>
+	<p>
+		<label for="mpg-min">Min = </label>
+		<input id="mpg-min" type="number" value="0" size="10" min="0" max="100000" step="5">
+		<label for="mpg-max">Max = </label>
+		<input id="mpg-max" type="number" value="100" size="10"min="0" max="100000" step="5">
+		<button id="update">Click to Run Query</button>
+
+	</p>
+	</div>
+    <script src="script/scatter.plot.js"></script>
+</body>
+
+</html>

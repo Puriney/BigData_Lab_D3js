@@ -1,0 +1,28 @@
+/*set the axis line color, dot stroke, font size, and font position*/
+body {
+  font: 15px sans-serif;
+}
+
+.name{
+  position: relative;
+  top: 90px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.title {
+  position: relative;
+  text-align: left;
+  font-size: 25px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}
