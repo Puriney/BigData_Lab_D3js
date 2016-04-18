@@ -1,0 +1,25 @@
+{
+  "name": "BigData_Lab_D3j3",
+  "homepage": "https://github.com/Puriney/BigData_Lab_D3js",
+  "authors": [
+    "Puriney <youryanyun@gmail.com>"
+  ],
+  "description": "Solutions to the Lab assignment \"D3.js\" of Big Data course",
+  "main": "index.html",
+  "keywords": [
+    "D3.js"
+  ],
+  "license": "GPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "^2.2.3",
+    "d3": "^3.5.16"
+  }
+}
