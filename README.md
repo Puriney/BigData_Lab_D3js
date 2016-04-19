@@ -1,6 +1,18 @@
-# BigData_Lab_D3js
+# BigData Lab: D3js
 
 Solutions to Lab assignment "D3.js" of Big Data course
+
+# How to use
+
+## Dependencies
+
+Run `bower install ` to install local dependencies, i.e. d3.js and jQuery.
+
+Though the online links supporting these dependencies have been included in html, running `bower install` is suggested for off-line investigation.
+
+## Input data
+
+As required by TA, the data itself should not be pushed to GitHub. Thus having created a directory named *data* under project root dir and having placed the source data file (*car.csv*) into *data* directory, you are all set.
 
 # Demo of required features
 
