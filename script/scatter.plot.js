@@ -28,7 +28,7 @@ var name = d3.select("body").append("h4", ":first-child")
 
 
 var svg = d3.select("body").insert("svg", ":first-child")
-    .attr("width", width + margin.left + margin.right)
+    .attr("width", width + margin.left + 2 * margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -76,15 +76,23 @@ legend.append("text")
         return d;
     });
 
+var figLegendRectSize = 18;
+var figLegendSpacing = 4;
+
+
 function update() {
     // select axis
     var xVar = d3.select('#xAXs').node().value,
         yVar = d3.select('#yAXs').node().value;
-    // redraw svg with new axis
+    // select car origin
+    var checks = {};
+    d3.selectAll('input[type=checkbox]').each(function() {
+        checks[this.value] = this.checked;
+    });
     var data = baseData.filter(function(d, i) {
         d.x = d[xVar];
         d.y = d[yVar];
-        return d;
+        return checks[d.origin];
     });
     // select min/max values
     var selectMin = d3.select('#mpg-min').node().value,
@@ -156,6 +164,34 @@ function update() {
                 "\n acceleration: " + d["acceleration"] +
                 "\n model year: " + d["model.year"]
         });
+
+    // add figure legend
+
+    // var figlegend = svg.selectAll(".figlegend")
+    //     .data(color.domain())
+    //     .enter()
+    //     .append("g")
+    //     .attr("class", "legend")
+    //     .attr("transform", function(d, i) {
+    //         var height = figLegendRectSize + figLegendSpacing;
+    //         var offset = height * color.domain().length / 2;
+    //         var horz = width - 2 * margin.right;
+    //         var vert = i * height + 1 * offset;
+    //         return 'translate(' + horz + ',' + vert + ')';
+    //     });
+
+    // figlegend.append("circle")
+    //     .attr("class", "dot")
+    //     .attr("r", 8)
+    //     .style("fill", color)
+    //     .style("stroke", "black");
+
+    // figlegend.append("text")
+    //     .attr("x", figLegendRectSize + figLegendSpacing)
+    //     .attr("y", figLegendRectSize - figLegendSpacing)
+    //     .text(function(d) {
+    //         return d;
+    //     });
 
 }
 
