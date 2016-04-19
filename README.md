@@ -39,3 +39,5 @@ Not only car name is displayed as `<h4>` when mouse hovered, but also it is auto
 - Filter data points based on `origin` of car
 - Figure legend based on `origin` of car
 
+![](demo/40figurelegend.gif)
+
